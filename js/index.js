@@ -46,13 +46,11 @@ document.getElementById('card-four').addEventListener('click', function () {
 
 document.getElementById('card-five').addEventListener('click', function () {
     const areaValue = document.getElementById('area-value').innerText;
-    console.log(areaValue);
     const textOne = document.getElementById('text-one').innerText;
-    console.log(textOne);
     const textTwo = document.getElementById('text-two').innerText;
-    console.log(textTwo);
 
-    // const cardResultFive = 
+    const cardResultFive = parseFloat(areaValue) * parseFloat(textOne) * parseFloat(textTwo);
+    console.log(cardResultFive);
 })
 
 
