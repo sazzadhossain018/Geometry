@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="garden">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geometry-genius</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar bg-base-100 bg-slate-500 px-10">
+                <div class="flex-1">
+                    <div>
+                        <h1 class="block text-4xl">Interactive</h1>
+                        <h2 class="text-2xl">Geometry Genius</h2>
+                    </div>                    
+                </div>
+                <div class="flex-none">
+                    <button class="btn btn-info">Info</button>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="flex gap-4 lg:px-12">
+
+        <div class="product-details grid md:grid-cols-2 lg:grid-cols-3 w-[65%] mt-5 gap-4">
+
+          <div class="card w-full bg-base-100 shadow-xl bg-emerald-800">
+            <figure class="px-10 pt-10">
+              <img src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 id="card-one-title" class="card-title">Triangle</h2>
+              <h3>Area (A)= <span id="area-value">0.5</span> x b x h</h3>
+              <div>
+                <input class="w-12 px-2.5" type="text" name="" id="field-one" placeholder="b"> cm
+              <input class="w-12 px-2.5"cm type="text" name="" id="field-two" placeholder="h"> cm
+              </div>
+              <div class="card-actions">
+                <button id="card-one" class="btn btn-primary">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card w-full bg-base-100 shadow-xl bg-emerald-800">
+              <figure class="px-10 pt-10">
+                <img src="./images/rectangle.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 id="card-two-title" class="card-title">Rectangle</h2>
+                <h3>Area (A)= w x l</h3>
+                <div>
+                  <input class="w-12 px-2.5" type="text" name="" id="field-three" placeholder="w"> cm
+                   <input class="w-12 px-2.5" type="text" name="" id="field-four" placeholder="l"> cm
+                </div>
+                <div class="card-actions">
+                  <button id="card-two" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl bg-emerald-800">
+              <figure class="px-10 pt-10">
+                <img src="./images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 id="card-title-three" class="card-title">Parallelogram</h2>
+                <h3>Area (A)= b x h</h3>
+                <h2>b= <span id="text-one">10</span> cm,h= <span id="text-two">12</span> cm</h2>
+                <div class="card-actions">
+                  <button id="card-three" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+          </div>
+           <div class="card w-full bg-base-100 shadow-xl bg-emerald-800">
+              <figure class="px-10 pt-10">
+                <img src="./images/rhombus.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 id="card-title-four" class="card-title">Rhombus</h2>
+                <h3>Area (A)= <span id="area-value" >0.5</span> x d<sub>1</sub> x d<sub>2</sub></h3>
+                <h2>d<sub>1</sub>=<span id="text-one">16</span> cm  d<sub>2</sub>=<span id="text-two">8</span> cm</h2>
+                <div class="card-actions">
+                  <button id="card-four" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl bg-emerald-800">
+              <figure class="px-10 pt-10">
+                <img src="./images/pentagon.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Pentagon</h2>
+                <h3>Area (A)=<span area-value>0.5</span> x p x b</h3>
+                <h2>b= <span id="text-one">6</span> cm  h= <span id="text-two">10</span> cm</h2>
+                <div class="card-actions">
+                  <button id="card-five" class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+          </div>
+          <div class="card w-full bg-base-100 shadow-xl bg-emerald-800">
+              <figure class="px-10 pt-10">
+                <img src="./images/ellipse.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Ellipse</h2>
+                <h3>Area (A)=π<span>3.14159</span>ab</h3>
+                <h2>b=10 cm, h=4 cm</h2>
+                <div class="card-actions">
+                  <button class="btn btn-primary">Calculate</button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div  class="w-[40%] bg-orange-900 mt-5">
+            <h1 class="underline text-center ">Area Calculation</h1>
+
+            <div class="overflow-x-auto">
+              <table class="table w-full">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Job</th>
+                    <th>Favorite Color</th>
+                  </tr>
+                </thead>
+                <tbody id="table-container">
+                 
+                  <!-- <tr>
+                    <th>1</th>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+    </main>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
